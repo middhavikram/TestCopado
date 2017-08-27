@@ -26,9 +26,4 @@
         <default>false</default>
         <label>Other</label>
     </standardValue>
-    <standardValue>
-        <fullName>Question</fullName>
-        <default>true</default>
-        <label>Question</label>
-    </standardValue>
 </StandardValueSet>

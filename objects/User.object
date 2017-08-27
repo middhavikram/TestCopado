@@ -60,58 +60,9 @@
     <enableFeeds>true</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
-        <fullName>DB_Region__c</fullName>
-        <description>This is a field that is installed by and used with the Adoption Dashboard AppExchange package. If your org already has a similar field, you can change the reports that are part of the Adoption Dashboard package to use your custom field and then delete this field.</description>
-        <externalId>false</externalId>
-        <label>DB Region</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>NA</fullName>
-                    <color>#009900</color>
-                    <default>false</default>
-                    <label>NA</label>
-                </value>
-                <value>
-                    <fullName>EMEA</fullName>
-                    <color>#3333FF</color>
-                    <default>false</default>
-                    <label>EMEA</label>
-                </value>
-                <value>
-                    <fullName>APAC</fullName>
-                    <color>#CC6600</color>
-                    <default>false</default>
-                    <label>APAC</label>
-                </value>
-                <value>
-                    <fullName>LA</fullName>
-                    <color>#990000</color>
-                    <default>false</default>
-                    <label>LA</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>ManagerId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
         <type>Hierarchy</type>
-    </fields>
-    <fields>
-        <fullName>Region__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <label>Region</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <listViews>
         <fullName>ActiveUsers</fullName>
@@ -135,13 +86,8 @@
     </listViews>
     <listViews>
         <fullName>AllUsers</fullName>
-        <columns>CORE.USERS.FIRST_NAME</columns>
-        <columns>CORE.USERS.LAST_NAME</columns>
-        <columns>CORE.USERS.ACTIVE</columns>
-        <columns>CORE.PROFILE.NAME</columns>
         <filterScope>Everything</filterScope>
         <label>All Users</label>
-        <language>en_US</language>
     </listViews>
     <searchLayouts>
         <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>

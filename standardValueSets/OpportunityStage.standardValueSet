@@ -6,7 +6,7 @@
         <default>false</default>
         <label>Prospecting</label>
         <closed>false</closed>
-        <forecastCategory>BestCase</forecastCategory>
+        <forecastCategory>Pipeline</forecastCategory>
         <probability>10</probability>
         <won>false</won>
     </standardValue>

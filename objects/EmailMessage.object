@@ -82,15 +82,4 @@
     <fields>
         <fullName>ValidatedFromAddress</fullName>
     </fields>
-    <webLinks>
-        <fullName>Forward</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <encodingKey>UTF-8</encodingKey>
-        <linkType>url</linkType>
-        <masterLabel>Forward to Another Service</masterLabel>
-        <openType>replace</openType>
-        <protected>false</protected>
-        <url>https://9domains1-dev-ed.my.salesforce.com/_ui/core/email/author/EmailAuthor?forward=1&amp;retURL=%2F{!EmailMessage.Id}</url>
-    </webLinks>
 </CustomObject>

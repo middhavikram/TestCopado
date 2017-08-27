@@ -56,29 +56,8 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <businessProcesses>
-        <fullName>Support Process - 1</fullName>
-        <isActive>true</isActive>
-        <values>
-            <fullName>Closed</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Escalated</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>New</fullName>
-            <default>true</default>
-        </values>
-        <values>
-            <fullName>Working</fullName>
-            <default>false</default>
-        </values>
-    </businessProcesses>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
-    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>AccountId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
@@ -109,13 +88,6 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
-        <fullName>CommunityId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>ContactEmail</fullName>
         <trackTrending>false</trackTrending>
     </fields>
@@ -139,28 +111,13 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
-        <fullName>Customer_Name__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <label>Customer Name</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Description</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
         <fullName>EngineeringReqNumber__c</fullName>
-        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <label>Engineering Req Number</label>
         <length>12</length>
@@ -170,19 +127,6 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>EntitlementId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>FeedItemId</fullName>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>IsClosedOnCreate</fullName>
@@ -195,45 +139,6 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>IsStopped</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>Link_Field__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <formula>HYPERLINK(&apos;/apex/TestPage?rURL=cancel&amp;inConsole=true&apos;, &apos;Create Warranty&apos;,&apos;_blank&apos;)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Link Field</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>MilestoneStatus</fullName>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>MilestoneStatusIcon</fullName>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>Open_Deal_Total_Amount__c</fullName>
-        <externalId>false</externalId>
-        <label>Open Deal Total Amount</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Currency</type>
     </fields>
     <fields>
         <fullName>Origin</fullName>
@@ -287,13 +192,6 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>ProductId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Product__c</fullName>
@@ -356,13 +254,6 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>QuestionId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>Reason</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
@@ -395,23 +286,6 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>SlaExitDate</fullName>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>SlaStartDate</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>SourceId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>Status</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
@@ -419,12 +293,7 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>StopStartDate</fullName>
-        <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
         <fullName>Subject</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
@@ -446,74 +315,11 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
-        <fullName>Timestamp__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <label>Timestamp</label>
-        <length>50</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Type</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>Unique_Field__c</fullName>
-        <caseSensitive>false</caseSensitive>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <label>Unique Field</label>
-        <length>50</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>true</unique>
-    </fields>
-    <fields>
-        <fullName>User_Group__c</fullName>
-        <externalId>false</externalId>
-        <label>User Group</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Sales</fullName>
-                    <default>false</default>
-                    <label>Sales</label>
-                </value>
-                <value>
-                    <fullName>Marketting</fullName>
-                    <default>false</default>
-                    <label>Marketting</label>
-                </value>
-                <value>
-                    <fullName>Customer Service Rep</fullName>
-                    <default>false</default>
-                    <label>Customer Service Rep</label>
-                </value>
-                <value>
-                    <fullName>General</fullName>
-                    <default>false</default>
-                    <label>General</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <listViews>
         <fullName>AllClosedCases</fullName>
@@ -557,369 +363,6 @@
         </filters>
         <label>My Open Cases</label>
     </listViews>
-    <listViews>
-        <fullName>TestQueue11_Case</fullName>
-        <filterScope>Queue</filterScope>
-        <label>TestQueue11</label>
-        <queue>TestQueue11</queue>
-        <sharedTo>
-            <allInternalUsers></allInternalUsers>
-        </sharedTo>
-    </listViews>
-    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
-    <recordTypeTrackHistory>true</recordTypeTrackHistory>
-    <recordTypes>
-        <fullName>Default</fullName>
-        <active>true</active>
-        <businessProcess>Support Process - 1</businessProcess>
-        <label>Default</label>
-        <picklistValues>
-            <picklist>Origin</picklist>
-            <values>
-                <fullName>Chatter</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Chatter Answers</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>PotentialLiability__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Priority</picklist>
-            <values>
-                <fullName>High</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Low</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Medium</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Product__c</picklist>
-            <values>
-                <fullName>GC1020</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC1040</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC1060</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC3020</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC3040</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC3060</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC5020</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC5040</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC5060</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Reason</picklist>
-            <values>
-                <fullName>Breakdown</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Equipment Complexity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Equipment Design</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Feedback</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Installation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Performance</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>SLAViolation__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Electrical</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Electronic</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mechanical</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Question</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Structural</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>User_Group__c</picklist>
-            <values>
-                <fullName>Customer Service Rep</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>General</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Marketting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sales</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Enquiry</fullName>
-        <active>true</active>
-        <businessProcess>Support Process - 1</businessProcess>
-        <label>Enquiry</label>
-        <picklistValues>
-            <picklist>Origin</picklist>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>PotentialLiability__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Priority</picklist>
-            <values>
-                <fullName>High</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Low</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Medium</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Product__c</picklist>
-            <values>
-                <fullName>GC1020</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC1040</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC1060</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC3020</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC3040</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC3060</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC5020</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC5040</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>GC5060</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Reason</picklist>
-            <values>
-                <fullName>Breakdown</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Equipment Complexity</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Equipment Design</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Feedback</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Installation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Performance</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>SLAViolation__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Electrical</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Electronic</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Mechanical</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Question</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Structural</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>User_Group__c</picklist>
-            <values>
-                <fullName>Customer Service Rep</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>General</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Marketting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sales</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
         <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>
@@ -935,44 +378,13 @@
         <lookupPhoneDialogsAdditionalFields>NAME</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CASES.STATUS</lookupPhoneDialogsAdditionalFields>
-        <searchFilterFields>CASES.CASE_NUMBER</searchFilterFields>
-        <searchFilterFields>ACCOUNT.NAME</searchFilterFields>
-        <searchFilterFields>ACCOUNT.SITE</searchFilterFields>
-        <searchFilterFields>NAME</searchFilterFields>
         <searchResultsAdditionalFields>CASES.CASE_NUMBER</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.SUBJECT</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.STATUS</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
-    <validationRules>
-        <fullName>Dummy</fullName>
-        <active>true</active>
-        <errorConditionFormula>CaseNumber == &apos;00001003&apos;</errorConditionFormula>
-        <errorMessage>Cannot save. Sorry</errorMessage>
-    </validationRules>
-    <webLinks>
-        <fullName>CreateWarrantyLink</fullName>
-        <availability>online</availability>
-        <displayType>link</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>CreateWarrantyLink</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>srcUp(&apos;/apex/TestPage&apos;);</url>
-    </webLinks>
-    <webLinks>
-        <fullName>Create_Case</fullName>
-        <availability>online</availability>
-        <displayType>massActionButton</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Create Case</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <requireRowSelection>true</requireRowSelection>
-        <url>window.location=&apos;/500/e?retURL=%2F{!Contact.Id}&amp;def_contact_id={!Contact.Id}&amp;def_account_id={!Account.Id}&amp;00N2800000CO9XL={!Contact.Name}-{!Account.Name}&amp;cas5=Question&amp;00N2800000CO9XQ={!Account.Open_Amounts_Deal__c}&amp;00N2800000CO9Xk={!$Setup.UserGroup__c.Group__c}&apos;</url>
-    </webLinks>
+    <sharingModel>ReadWriteTransfer</sharingModel>
     <webLinks>
         <fullName>UpsellCrosssellOpportunity</fullName>
         <availability>online</availability>

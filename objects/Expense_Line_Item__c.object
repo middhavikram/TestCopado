@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Date_Paid__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when the amount is actually paid</inlineHelpText>
+        <label>Date Paid</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date_Passed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Due Date Passed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Expense_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Expense__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expense Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expense__c</fullName>
+        <externalId>false</externalId>
+        <label>Expense</label>
+        <referenceTo>Expense__c</referenceTo>
+        <relationshipLabel>Expense Line Items</relationshipLabel>
+        <relationshipName>Expense_Line_Items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Formatted_Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Day(DATEVALUE(Due_Date__c)))  &amp; &apos; &apos; &amp;  CASE(MONTH(DATEVALUE(Due_Date__c)),
+1, &quot;Jan&quot;,
+2, &quot;Feb&quot;,
+3, &quot;Mar&quot;, 
+4, &quot;Apr&quot;, 
+5, &quot;May&quot;, 
+6, &quot;Jun&quot;,
+7, &quot;Jul&quot;,
+8, &quot;Aug&quot;,
+9, &quot;Sep&quot;,
+10, &quot;Oct&quot;,
+11, &quot;Nov&quot;,
+12, &quot;Dec&quot;,
+&quot;None&quot;) &amp; &apos; &apos; &amp; Text(Year(DATEVALUE(Due_Date__c)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Formatted Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Formatted_Paid_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Day(Date_Paid__c)) &amp; &apos; &apos; &amp; CASE(MONTH(Date_Paid__c), 
+1, &quot;Jan&quot;, 
+2, &quot;Feb&quot;, 
+3, &quot;Mar&quot;, 
+4, &quot;Apr&quot;, 
+5, &quot;May&quot;, 
+6, &quot;Jun&quot;, 
+7, &quot;Jul&quot;, 
+8, &quot;Aug&quot;, 
+9, &quot;Sep&quot;, 
+10, &quot;Oct&quot;, 
+11, &quot;Nov&quot;, 
+12, &quot;Dec&quot;, 
+&quot;None&quot;) &amp; &apos; &apos; &amp; Text(Year(Date_Paid__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Formatted Paid Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Paid_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Paid By</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Expense Line Items</relationshipLabel>
+        <relationshipName>Expense_Line_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Paid</fullName>
+                    <default>true</default>
+                    <label>Not Paid</label>
+                </value>
+                <value>
+                    <fullName>Paid</fullName>
+                    <default>false</default>
+                    <label>Paid</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Expense Line Item</label>
+    <nameField>
+        <displayFormat>ELI-{000000}</displayFormat>
+        <label>Expense Line Item Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Expense Line Items</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>
