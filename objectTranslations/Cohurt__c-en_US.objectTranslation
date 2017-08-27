@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cohurt</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cohurt</value>
+    </caseValues>
+    <fields>
+        <label><!-- First --></label>
+        <name>First__c</name>
+    </fields>
+    <fields>
+        <label><!-- MasterCase --></label>
+        <name>MasterCase__c</name>
+        <relationshipLabel><!-- Cohurt (MasterCase) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Patient --></label>
+        <name>Patient__c</name>
+        <relationshipLabel><!-- Cohurt --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Trial --></label>
+        <name>Trial__c</name>
+        <relationshipLabel><!-- Cohurt --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 11 --></label>
+        <name>X11__c</name>
+    </fields>
+    <fields>
+        <label><!-- 12 --></label>
+        <name>X12__c</name>
+    </fields>
+    <fields>
+        <label><!-- eighth --></label>
+        <name>eighth__c</name>
+    </fields>
+    <fields>
+        <label><!-- fifth --></label>
+        <name>fifth__c</name>
+    </fields>
+    <fields>
+        <label><!-- fourth --></label>
+        <name>fourth__c</name>
+    </fields>
+    <fields>
+        <label><!-- ninth --></label>
+        <name>ninth__c</name>
+    </fields>
+    <fields>
+        <label><!-- second --></label>
+        <name>second__c</name>
+    </fields>
+    <fields>
+        <label><!-- seventh --></label>
+        <name>seventh__c</name>
+    </fields>
+    <fields>
+        <label><!-- sixth --></label>
+        <name>sixth__c</name>
+    </fields>
+    <fields>
+        <label><!-- tenth --></label>
+        <name>tenth__c</name>
+    </fields>
+    <fields>
+        <label><!-- third --></label>
+        <name>third__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test11</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test11</value>
+    </caseValues>
+    <fields>
+        <label><!-- Cohurt --></label>
+        <name>Cohurt__c</name>
+        <relationshipLabel><!-- Test11 --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Test --></label>
+        <name>tttttt__c</name>
+        <relationshipLabel><!-- Test11 --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

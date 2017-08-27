@@ -1,0 +1,7 @@
+<apex:page controller="RestHelperClass" language="{!$CurrentPage.parameters.lang}" contentType="application/json" showHeader="false" sidebar="false" standardStylesheets="false">
+    
+    
+    <apex:repeat value="{!labels}" var="l">
+    	{!$Label[l]}]
+    </apex:repeat>
+</apex:page>

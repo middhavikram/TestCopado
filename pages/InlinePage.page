@@ -1,0 +1,6 @@
+<apex:page standardController="Account">
+
+This is a test page
+
+<apex:outputLink value="https://google.com">Google</apex:outputLink>
+</apex:page>

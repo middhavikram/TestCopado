@@ -1,0 +1,7 @@
+<apex:page standardController="Case">
+    
+    <apex:outputLink value="https://google.com">First Report</apex:outputLink><br></br><br></br>
+    <apex:outputLink value="https://google.com">Second Report</apex:outputLink><br></br><br></br>
+    <apex:outputLink value="https://google.com">Third Report</apex:outputLink><br></br><br></br>
+
+</apex:page>

@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable">
+	<BGSIGCAP:SignatureCapture recordId="0012800000YZfvR"
+        startMsg="Click the button to get started"
+        enterMsg="Please sign below"
+        completeMsg="Here is the signature you entered"
+        width="50%"
+        height="200px"/>
+</aura:component>

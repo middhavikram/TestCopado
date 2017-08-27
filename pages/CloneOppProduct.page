@@ -1,0 +1,6 @@
+<apex:page StandardController="OpportunityLineItem">
+  
+  <apex:form >
+      <apex:InputField value="{!OpportunityLineItem.Product__c}"/>
+  </apex:form>
+</apex:page>

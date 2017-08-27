@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>Set_Case_to_Close</name>
+        <label>Set Case to Close</label>
+        <locationX>424</locationX>
+        <locationY>265</locationY>
+        <assignmentItems>
+            <assignToReference>caseO.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <interviewLabel>Case Close {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case Close-2</label>
+    <loops>
+        <name>Loop_Cases</name>
+        <label>Loop Cases</label>
+        <locationX>633</locationX>
+        <locationY>132</locationY>
+        <assignNextValueToReference>caseO</assignNextValueToReference>
+        <collectionReference>caseObjs</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Set_Case_to_Close</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Case_Update</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Case_Lookup</name>
+        <label>Case Lookup</label>
+        <locationX>248</locationX>
+        <locationY>131</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <faultConnector>
+            <targetReference>Loop_Cases</targetReference>
+        </faultConnector>
+        <filters>
+            <field>Id</field>
+            <operator>Contains</operator>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </filters>
+        <object>Case</object>
+        <outputReference>caseObjs</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Status</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Case_Update</name>
+        <label>Case Update</label>
+        <locationX>808</locationX>
+        <locationY>284</locationY>
+        <inputReference>caseObj</inputReference>
+    </recordUpdates>
+    <startElementReference>Case_Lookup</startElementReference>
+    <variables>
+        <name>caseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>caseO</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>caseObj</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <name>caseObjs</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+</Flow>
