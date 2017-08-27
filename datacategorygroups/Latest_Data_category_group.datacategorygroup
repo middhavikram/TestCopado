@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>1</label>
+            <name>X1</name>
+        </dataCategory>
+        <dataCategory>
+            <label>2</label>
+            <name>X2</name>
+        </dataCategory>
+        <dataCategory>
+            <label>3</label>
+            <name>X3</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Latest Data category group</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

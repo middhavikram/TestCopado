@@ -1,0 +1,9 @@
+<apex:page controller="TC">
+  
+  ------ {!$Network.Name}
+    <apex:form >
+    <apex:selectList value="{!options}">
+        <apex:selectOptions value="{!coverTypeOptions}"/>
+    </apex:selectList>
+    </apex:form>
+</apex:page>

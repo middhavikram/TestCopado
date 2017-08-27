@@ -1,0 +1,26 @@
+<apex:page standardController="case" id="pg"  showHeader="false" sidebar="false" standardStylesheets="false" >
+<apex:includeScript value="/support/console/40.0/integration.js"/>
+<script type = "text/javascript">
+    var winObj;
+    window.onload=function()      
+    {       
+       testOpenPrimaryTab();
+        //winObj = window; 
+        //window.history.back();
+        
+        setTimeout(function(){ console.log('starting windows reload');window.history.back(); },1);
+    };
+    function testOpenPrimaryTab() {
+        var url='';
+        url = '/500/e?contactId={!$CurrentPage.parameters.contactId}&isdtp=vw';
+        sforce.console.openPrimaryTab(null, '/apex/LoadTest', true, 'Create Case ',openSuccess, null);
+        //winObj = window; 
+        //window.history.back(); 
+    };
+    
+    var openSuccess = function openSuccess(result) {
+        console.log('loaded the new window');
+        //window.history.back();      
+    };
+</script> 
+</apex:page>

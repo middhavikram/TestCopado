@@ -1,0 +1,130 @@
+<apex:page showHeader="false"
+  sidebar="false"
+  standardController="Case"
+  extensions="CaseFeedActionSendEmailExtension">
+<style type="text/css">
+.overflow{display:block;height:200px;overflow-y:auto;}
+.bPageBlock .pbHeader .pbTitle,.bPageBlock .pbHeader .pbButton{padding:0 12px;}
+.pbButton{font-size:71%;}
+</style>
+<apex:includeScript value="https://code.jquery.com/jquery-2.2.3.min.js"/>
+<apex:includeScript value="/support/console/33.0/integration.js"/>
+<apex:includeScript value="/canvas/sdk/js/33.0/publisher.js"/>
+<script type='text/javascript'>
+var subscribed = false;
+var subTabUrl = null;
+
+var replyToEmail = function replyToEmail(emailId)
+{
+  // only subscribe once
+  if (!subscribed)
+  {
+    // subscribe to the 'EmailSent' event that will be fired from the 'RefreshFeed' page
+    console.log("Subscribing to the event ('EmailSent-{!caseId}') indicating the agent is leaving the 'Send an Email' page.")
+    sforce.console.addEventListener('EmailSent-{!caseId}', emailSent);
+    subscribed = true;
+  }
+
+  // build the URL
+  subTabUrl = '/_ui/core/email/author/EmailAuthor?isdtp=vw';
+  if (emailId)
+  {
+    subTabUrl += '&email_id=' + emailId;
+  }
+  else
+  {
+    // add the case id, contact id, and subject to the URL parameters
+    subTabUrl += '&p3_lkid={!caseId}' + ('{!contactId}' !== '' ? '&p2_lkid={!contactId}' : '') +
+      '&p6=' + encodeURIComponent('RE: {!JSENCODE(caseSubject)}');
+  }
+  subTabUrl += '&saveURL=%2Fapex%2FRefreshFeed%3FcaseId%3D{!caseId}%26saved%3Dtrue' +
+    '&retURL=%2Fapex%2FRefreshFeed%3FcaseId%3D{!caseId}%26saved%3Dfalse';
+
+  // find the primary tab id
+  sforce.console.getEnclosingPrimaryTabId(openSubtab);
+}
+
+var openSubtab = function openSubtab(result)
+{
+  console.log('Primary Tab Id: ' + result.id);
+  console.log('URL: ' + subTabUrl);
+
+  // sforce.console.openSubtab(primaryTabId:String, url:URL, active:Boolean, tabLabel:String, id:String, (optional)callback:Function, (optional)name:String)
+  sforce.console.openSubtab(result.id , subTabUrl, true, 'Send an Email', null, openSuccess);
+}
+
+var openSuccess = function openSuccess(result) {
+
+            //Report whether we succeeded in opening the subtab
+
+            if (result.success == true) {
+
+                alert(JSON.stringify(j$('input[name="attach"]')));
+
+            } else {
+
+                alert('subtab cannot be opened');
+
+            }
+
+        };
+
+
+var emailSent = function emailSent(result)
+{
+  console.log('emailSent() entered');
+  console.log(result);
+
+  if (result.message == "Email Sent")
+  {
+    // refresh the feed
+    console.log('Refreshing the feed');
+    Sfdc.canvas.publisher.publish({ name : 'publisher.refresh', payload : { feed: true }});
+  }
+
+  // close the 'Send an Email' sub-tab
+  sforce.console.getFocusedSubtabId(closeSubTab);
+
+  // refresh the email list
+  refreshEmailList();
+}
+
+var closeSubTab = function closeSubTab(result)
+{
+  console.log('Closing Tab Id: ' + result.id);
+  sforce.console.closeTab(result.id);
+}
+</script>
+<apex:form >
+  <apex:actionFunction name="refreshEmailList" action="{!refreshEmailList}" rerender="EmailList"/>
+</apex:form>
+<apex:outputPanel styleClass="overflow" id="EmailList">
+  <apex:pageBlock title="{!$Label.site.email}">
+    <apex:pageBlockButtons location="top">
+      <input value="Send an Email" class="btn" name="newEmail" onclick="replyToEmail();" title="Send an Email" type="button"/>
+    </apex:pageBlockButtons>
+    <apex:pageBlockTable value="{!Emails}" var="Email" rendered="{!Emails.size > 0}">
+      <apex:column >
+        <apex:facet name="header">Action</apex:facet>
+        <apex:outputPanel rendered="{!Email.Incoming}">
+          <a href="#" onclick="replyToEmail('{!Email.Id}');">Reply</a>
+        </apex:outputPanel>
+      </apex:column>
+      <apex:column value="{!Email.Status}"/>
+      <apex:column value="{!Email.Subject}"/>
+      <apex:column value="{!Email.FromAddress}"/>
+      <apex:column value="{!Email.MessageDate}"/>
+    </apex:pageBlockTable>
+    <apex:outputPanel rendered="{!Emails.size == 0}">No Emails Available</apex:outputPanel>
+  </apex:pageBlock>
+</apex:outputPanel>
+
+<script>
+    var j$ = jQuery.noConflict();
+    
+    j$(document).ready(function() {
+      
+        
+    });
+</script>
+</apex:page>

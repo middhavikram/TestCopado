@@ -1,0 +1,6 @@
+<apex:page controller="OppController">
+
+
+1-- {!opp.Name}
+2--{!oppName}
+</apex:page>

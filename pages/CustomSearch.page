@@ -1,0 +1,192 @@
+<apex:page standardStylesheets="false" sidebar="false" docType="html-5.0" controller="CustomSearchController">
+
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS103, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    
+    <apex:form >
+        <apex:actionFunction name="searchResults" rerender="resultsId" oncomplete="hideSpinner()">     
+             <apex:param id="sType" name="searchType" value="" />
+             <apex:param id="sString" name="searchString" value="" />
+         </apex:actionFunction>
+    
+        <style>
+            @media (max-width: 767px) {
+                .slds .slds-size--1-of-1 {
+                    margin-top: 5%;
+                }
+            }
+            .required-alert {
+                border: 1px solid #A01E1E !important;
+            }
+
+
+        </style>
+        <!-- REQUIRED SLDS WRAPPER -->
+        <div class="slds" >
+    
+            <!-- PAGE HEADER -->
+            <div class="slds-page-header" role="banner">
+    
+                <!-- LAYOUT GRID -->
+                <div class="slds-grid slds-wrap slds-grid--pull-padded">
+    
+                    <!-- GRID COL -->
+                    <div class="slds-col slds-medium-size--1-of-6 slds-size--1-of-1" style="padding-top:1%">
+    
+                        <!-- HEADING AREA -->
+                        <h1 class="slds-text-heading--medium">Customer Search</h1>
+                        <!-- /HEADING AREA -->
+    
+                    </div>
+    
+                    <!-- GRID COL -->
+                    <div class="slds-col slds-medium-size--2-of-6 slds-size--1-of-1 slds-p-left--medium slds-p-right--medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="select-01">Search Type</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-select_container">
+                                    <select id="searchType" class="slds-select">
+                                        <option>Id</option>
+                                        <option>Mobile</option>
+                                        <option>Home Phone</option>
+                                        <option>Office Phone</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / GRID COL -->
+    
+                    <!-- GRID COL -->
+                    <div class="slds-col slds-medium-size--2-of-6 slds-size--1-of-1 slds-p-left--medium slds-p-right--medium">
+    
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-01">Search String</label>
+                            <div class="slds-form-element__control">
+                                <input class="slds-input" type="text" id="searchStringId" />
+                            </div>
+                        </div>
+    
+                    </div>
+                    <!-- / GRID COL -->
+    
+                    <div class="slds-col--padded slds-medium-size--1-of-6 slds-size--1-of-1 " style="padding-top:1%;padding-left:2%;padding-right:2%">
+                        <div class="slds-form-element">
+                            <button class="slds-button slds-button--brand" type="button" style="width:95%;margin-left:3%;" id="searchButtonId">Search</button>
+                        </div>
+                    </div>
+    
+    
+                    <!-- / GRID COL -->
+    
+                </div>
+                <!-- / LAYOUT GRID -->
+    
+            </div>
+            
+            <div class="slds-spinner_container slds-hide" id="spinner">
+                <div class="slds-spinner--brand slds-spinner slds-spinner--medium" aria-hidden="false" role="alert">
+                  <div class="slds-spinner__dot-a"></div>
+                  <div class="slds-spinner__dot-b"></div>
+                </div>
+              </div>
+            <!-- / PAGE HEADER -->
+            <br></br>
+            <apex:outputPanel id="resultsId">
+                
+                <apex:repeat value="{!searchResults}" var="res"> 
+                    <div class="slds-card">
+                        <div class="slds-card__header slds-grid">
+                            <div class="slds-media slds-media--center slds-has-flexi-truncate">
+        
+                                <div class="slds-media__body">
+                                    <h2 class="slds-text-heading--small slds-truncate">Card Header (2)</h2>
+                                </div>
+                            </div>
+                            <div class="slds-no-flex">
+                                <div class="slds-button-group">
+                                    <button class="slds-button slds-button--neutral slds-button--small">Chatter</button>
+                                    <button class="slds-button slds-button--neutral slds-button--small">Create Opportunity</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-card__body">
+                            <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal slds-no-row-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Type</th>
+                                        <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Chinese Name</th>
+                                        <th class="slds-text-heading--label slds-size--1-of-4" scope="col">English Name</th>
+                                        <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Id</th>
+                                        <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Mobile</th>
+                                        <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Phone</th>
+                                        <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Email</th>
+                                        <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Delegated RM</th>
+        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="slds-hint-parent">
+                                        <td class="slds-size--1-of-4" data-label="Name">{!res.rType}</td>
+                                        <td class="slds-size--1-of-4" data-label="Company">{!res.chineseName}</td>
+                                        <td class="slds-size--1-of-4" data-label="Title">{!res.englishName}</td>
+                                        <td class="slds-size--1-of-4" data-label="Email">{!res.nationalId}</td>
+                                        <td class="slds-size--1-of-4" data-label="Name">{!res.mobile}</td>
+                                        <td class="slds-size--1-of-4" data-label="Company">{!res.phone}</td>
+                                        <td class="slds-size--1-of-4" data-label="Title">{!res.email}</td>
+                                        <td class="slds-size--1-of-4" data-label="Email">{!res.delegatedRM}</td>
+        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </apex:repeat>
+            </apex:outputPanel>
+    
+        </div>
+    
+    </apex:form>
+
+    <!-- / REQUIRED SLDS WRAPPER -->
+
+    </html>
+
+    <script>
+        var j$ = jQuery.noConflict();
+
+        j$(document).ready(function() {
+
+            j$('#searchButtonId').click(search);
+            j$('#searchStringId').keypress(validateSearchText);
+
+        });
+        
+        function hideSpinner(){
+            j$('#spinner').hide();
+        }
+
+        function search() {
+            if (j$('#searchStringId').val().trim() == '') {
+                j$('#searchStringId').addClass('required-alert');
+                return;
+            }
+            
+            j$('#spinner').show();
+            
+            searchResults(j$('#searchType').val(),j$('#searchStringId').val().trim());
+            
+            /*CustomSearchController.performSearch( ,function(res,err){
+                j$('#spinner').hide();
+            });*/
+        }
+
+        function validateSearchText() {
+            j$('#searchStringId').removeClass('required-alert');
+        }
+    </script>
+
+</apex:page>

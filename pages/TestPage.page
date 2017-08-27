@@ -1,0 +1,52 @@
+<apex:page standardController="Case">
+
+<apex:includeScript value="https://code.jquery.com/jquery-2.2.3.min.js"/>
+
+
+<div class="pbSubsection"><table class="detailList" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="labelCol">Email Format</td><td class="data2Col" colspan="3">&nbsp;<b>Text-Only</b>&nbsp;&nbsp;[&nbsp;<a href="javascript:switchTextMode()"><b>Switch to HTML</b></a>&nbsp;]</td></tr>
+<tr><td class="labelCol"><label for="p2">To</label></td><td class="data2Col" colspan="3"><input type="hidden" name="p2_lkid" id="p2_lkid" value="00Q2800000Hu9AQ"/><input type="hidden" name="p2_lkold" id="p2_lkold" value="Kristen Akin"/><input type="hidden" name="p2_lktp" id="p2_lktp" value="00Q"/><input type="hidden" name="p2_lspf" id="p2_lspf" value="0"/><input type="hidden" name="p2_lspfsub" id="p2_lspfsub" value="0"/><input type="hidden" name="p2_mod" id="p2_mod" value="0"/><span class="lookupInput"><input id="p2" maxlength="255" name="p2" onchange="getElementByIdCS('p2_lkid').value='';getElementByIdCS('p2_mod').value='1';" size="20" type="text" value="Kristen Akin"/><a href="javascript:%20openLookup%28%27%2F_ui%2Fcommon%2Fdata%2FLookupPage%3Flkfm%3DeditPage%26lknm%3Dp2%26lktp%3D%27%20%2B%20getElementByIdCS%28%27p2_lktp%27%29.value%2C670%2C%271%27%2C%27%26lksrch%3D%27%20%2B%20escapeUTF%28getElementByIdCS%28%27p2%27%29.value.substring%280%2C%2080%29%29%29" id="p2_lkwgt" onclick="setLastMousePosition(event)" title="To Lookup (New Window)"><img src="/s.gif" alt="To Lookup (New Window)" class="lookupIcon" onblur="this.className = 'lookupIcon';" onfocus="this.className = 'lookupIconOn';" onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title="To Lookup (New Window)"/></a></span></td></tr>
+<tr><td class="labelCol"><a href="javascript: openPopup(%27/_ui/core/email/author/EmailCCBccLookup%27, %27CCBCCLookup%27, 420, 490, %27width=420,height=490,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no%27, true);" onclick="javascript: setLastMousePosition(event);" title="Additional To (New Window)">Additional To:</a></td><td class="data2Col" colspan="3"><textarea cols="65" id="p24" maxlength="2000" name="p24" rows="2" title="Additional To" type="text" wrap="soft"></textarea>&nbsp;<a href="javascript:%20openPopup%28%27%2F_ui%2Fcore%2Femail%2Fauthor%2FEmailCCBccLookup%27%2C%20%27CCBCCLookup%27%2C%20420%2C%20490%2C%20%27width%3D420%2Cheight%3D490%2Ctoolbar%3Dno%2Cstatus%3Dno%2Cdirectories%3Dno%2Cmenubar%3Dno%2Cresizable%3Dyes%2Cscrollable%3Dno%27%2C%20true%29%3B" id="p24_lkwgt" onclick="setLastMousePosition(event)" title="Additional To Lookup (New Window)"><img src="/s.gif" alt="Additional To Lookup (New Window)" class="lookupIcon" onblur="this.className = 'lookupIcon';" onfocus="this.className = 'lookupIconOn';" onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title="Additional To Lookup (New Window)"/></a></td></tr>
+<tr><td class="labelCol"><a href="javascript: openPopup(%27/_ui/core/email/author/EmailCCBccLookup%27, %27CCBCCLookup%27, 420, 490, %27width=420,height=490,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no%27, true);" onclick="javascript: setLastMousePosition(event);" title="CC (New Window)">CC:</a></td><td class="data2Col" colspan="3"><textarea cols="65" id="p4" maxlength="2000" name="p4" rows="2" title="CC" type="text" wrap="soft"></textarea>&nbsp;<a href="javascript:%20openPopup%28%27%2F_ui%2Fcore%2Femail%2Fauthor%2FEmailCCBccLookup%27%2C%20%27CCBCCLookup%27%2C%20420%2C%20490%2C%20%27width%3D420%2Cheight%3D490%2Ctoolbar%3Dno%2Cstatus%3Dno%2Cdirectories%3Dno%2Cmenubar%3Dno%2Cresizable%3Dyes%2Cscrollable%3Dno%27%2C%20true%29%3B" id="p4_lkwgt" onclick="setLastMousePosition(event)" title="CC Lookup (New Window)"><img src="/s.gif" alt="CC Lookup (New Window)" class="lookupIcon" onblur="this.className = 'lookupIcon';" onfocus="this.className = 'lookupIconOn';" onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title="CC Lookup (New Window)"/></a></td></tr>
+<tr><td class="labelCol"><a href="javascript: openPopup(%27/_ui/core/email/author/EmailCCBccLookup%27, %27CCBCCLookup%27, 420, 490, %27width=420,height=490,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no%27, true);" onclick="javascript: setLastMousePosition(event);" title="BCC (New Window)">BCC:</a></td><td class="data2Col" colspan="3"><textarea cols="65" id="p5" maxlength="2000" name="p5" rows="2" title="BCC" type="text" wrap="soft">vikram@middha.com</textarea>&nbsp;<a href="javascript:%20openPopup%28%27%2F_ui%2Fcore%2Femail%2Fauthor%2FEmailCCBccLookup%27%2C%20%27CCBCCLookup%27%2C%20420%2C%20490%2C%20%27width%3D420%2Cheight%3D490%2Ctoolbar%3Dno%2Cstatus%3Dno%2Cdirectories%3Dno%2Cmenubar%3Dno%2Cresizable%3Dyes%2Cscrollable%3Dno%27%2C%20true%29%3B" id="p5_lkwgt" onclick="setLastMousePosition(event)" title="BCC Lookup (New Window)"><img src="/s.gif" alt="BCC Lookup (New Window)" class="lookupIcon" onblur="this.className = 'lookupIcon';" onfocus="this.className = 'lookupIconOn';" onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title="BCC Lookup (New Window)"/></a></td></tr>
+<tr><td class="labelCol requiredInput"><label for="p6"><span class="assistiveText">*</span>Subject</label></td><td class="data2Col" colspan="3"><div class="requiredInput"><div class="requiredBlock"></div><input id="p6" maxlength="100" name="p6" size="70" type="text"/></div></td></tr>
+<tr><td class="labelCol"><label for="p7">Body</label></td><td class="data2Col" colspan="3"><textarea cols="93" id="p7" maxlength="384000" name="p7" rows="15" type="text" wrap="soft"></textarea></td></tr>
+<tr class="detailRow"><td colspan="4"><input type="hidden" id="textmode" name="textmode" value="t"/></td></tr><tr class="last detailRow"><td colspan="4"><input type="hidden" id="save" name="save" value="1"/><input type="hidden" id="deleter" name="deleter" value=""/><input type="hidden" id="deleter_type" name="deleter_type" value=""/><input type="hidden" id="dispositionSeqId" name="dispositionSeqId" value=""/><input type="hidden" id="dispositionInline" name="dispositionInline" value=""/></td></tr></tbody></table></div>
+<script>
+    var j$ = jQuery.noConflict();
+    
+    j$(document).ready(function() {
+      
+        
+    });
+    
+    var delim = ";";
+function pickupValue(additionalToValue, ccValue, bccValue) {
+    if(additionalToValue != '') {
+        if (j$('#p24').val() != '') {
+            j$('#p24').val(j$('#p24').val() + delim);
+        }
+        j$('#p24').val(j$('#p24').val() + additionalToValue);
+    }
+    if(ccValue != '') {
+        if (j$('#p4').val() != '') {
+            j$('#p4').val(j$('#p4').val() + delim);
+            
+        }
+        j$('#p4').val(j$('#p4').val() + ccValue);
+        
+    }
+    if(bccValue != '') {
+        if (j$('#p5').val() != '') {
+            j$('#p5').val(j$('#p5').val() + delim);
+            
+        }
+        j$('#p5').val(j$('#p5').val() + bccValue);
+        
+    }
+    closePopup();
+}
+    
+
+</script>
+
+</apex:page>

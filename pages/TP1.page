@@ -1,0 +1,4 @@
+<apex:page extensions="TPController" standardController="Account">
+  <apex:outputLink onclick="alert('This is the alert');return false;">This is a test link</apex:outputLink>
+  
+</apex:page>

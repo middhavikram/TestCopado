@@ -1,0 +1,13 @@
+<apex:page >
+    
+    <script type = "text/javascript">
+    var winObj;
+    window.onload=function()      
+    {       
+       console.log('LoadTestPage is loaded');
+    };
+    
+</script> 
+    
+    <apex:outputText >This is the load test page</apex:outputText>
+</apex:page>
