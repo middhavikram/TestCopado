@@ -54,6 +54,15 @@
         <fullName>Name</fullName>
         <trackHistory>false</trackHistory>
     </fields>
+    <listViews>
+        <fullName>All_Price_Books</fullName>
+        <columns>PRICEBOOK2.NAME</columns>
+        <columns>PRICEBOOK2.DESCRIPTION</columns>
+        <columns>PRICEBOOK2.LAST_UPDATE</columns>
+        <columns>PRICEBOOK2.IS_ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Price Books</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>PRICEBOOK2.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>PRICEBOOK2.DESCRIPTION</customTabListAdditionalFields>
@@ -72,5 +81,5 @@
         <searchResultsAdditionalFields>PRICEBOOK2.LAST_UPDATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>PRICEBOOK2.IS_ACTIVE</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Read</sharingModel>
+    <sharingModel>ReadSelect</sharingModel>
 </CustomObject>

@@ -101,21 +101,10 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>EntitlementId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>GrandTotal</fullName>
     </fields>
     <fields>
         <fullName>IsClosed</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>IsStopped</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
@@ -125,10 +114,21 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>MilestoneStatus</fullName>
+        <fullName>LocationId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>MilestoneStatusIcon</fullName>
+        <fullName>MaintenancePlanId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MinimumCrewSize</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
@@ -155,6 +155,11 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>RecommendedCrewSize</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>RootWorkOrderId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -164,20 +169,16 @@
         <fullName>ServiceAppointmentCount</fullName>
     </fields>
     <fields>
-        <fullName>ServiceContractId</fullName>
+        <fullName>ServiceReportTemplateId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>SlaExitDate</fullName>
+        <fullName>ServiceTerritoryId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>SlaStartDate</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>StartDate</fullName>
@@ -196,17 +197,17 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>StopStartDate</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
         <fullName>Subject</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Subtotal</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>SuggestedMaintenanceDate</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
@@ -219,6 +220,12 @@
         <fullName>TotalPrice</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>WorkTypeId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <listViews>
         <fullName>All_WorkOrders</fullName>

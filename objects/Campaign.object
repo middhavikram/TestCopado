@@ -45,11 +45,10 @@
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <enableFeeds>true</enableFeeds>
+    <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <fields>
         <fullName>ActualCost</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>AmountAllOpportunities</fullName>
@@ -59,108 +58,22 @@
     </fields>
     <fields>
         <fullName>BudgetedCost</fullName>
-        <trackFeedHistory>true</trackFeedHistory>
     </fields>
     <fields>
         <fullName>CampaignMemberRecordTypeId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>DB_Campaign_Tactic__c</fullName>
-        <description>This is a field that is installed by and used with the Adoption Dashboard AppExchange package. If your org already has a similar field, you can change the reports that are part of the Adoption Dashboard package to use your custom field and then delete this field.</description>
-        <externalId>false</externalId>
-        <label>DB Campaign Tactic</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <controllingField>Type</controllingField>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Print Advertisement</fullName>
-                    <default>false</default>
-                    <label>Print Advertisement</label>
-                </value>
-                <value>
-                    <fullName>Email</fullName>
-                    <default>false</default>
-                    <label>Email</label>
-                </value>
-                <value>
-                    <fullName>Employment Seminars</fullName>
-                    <default>false</default>
-                    <label>Employment Seminars</label>
-                </value>
-                <value>
-                    <fullName>Webinars</fullName>
-                    <default>false</default>
-                    <label>Webinars</label>
-                </value>
-                <value>
-                    <fullName>Public Relations</fullName>
-                    <default>false</default>
-                    <label>Public Relations</label>
-                </value>
-                <value>
-                    <fullName>Partners</fullName>
-                    <default>false</default>
-                    <label>Partners</label>
-                </value>
-                <value>
-                    <fullName>Referral Program</fullName>
-                    <default>false</default>
-                    <label>Referral Program</label>
-                </value>
-                <value>
-                    <fullName>Other</fullName>
-                    <default>false</default>
-                    <label>Other</label>
-                </value>
-                <value>
-                    <fullName>Lunches</fullName>
-                    <default>false</default>
-                    <label>Lunches</label>
-                </value>
-                <value>
-                    <fullName>Direct Mail</fullName>
-                    <default>false</default>
-                    <label>Direct Mail</label>
-                </value>
-                <value>
-                    <fullName>Sales Call Down</fullName>
-                    <default>false</default>
-                    <label>Sales Call Down</label>
-                </value>
-                <value>
-                    <fullName>Online Banners/Ads</fullName>
-                    <default>false</default>
-                    <label>Online Banners/Ads</label>
-                </value>
-                <value>
-                    <fullName>Internal Website</fullName>
-                    <default>false</default>
-                    <label>Internal Website</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>Description</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>EndDate</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>ExpectedResponse</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>ExpectedRevenue</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>HierarchyActualCost</fullName>
@@ -200,11 +113,9 @@
     </fields>
     <fields>
         <fullName>IsActive</fullName>
-        <trackFeedHistory>true</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Name</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>NumberOfContacts</fullName>
@@ -226,34 +137,35 @@
     </fields>
     <fields>
         <fullName>NumberSent</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>ParentId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>StartDate</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Status</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Type</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
     <listViews>
         <fullName>AllActiveCampaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CORE.USERS.FIRST_NAME</columns>
+        <columns>CORE.USERS.LAST_NAME</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CAMPAIGN.ACTIVE</field>
@@ -264,6 +176,11 @@
     </listViews>
     <listViews>
         <fullName>MyActiveCampaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
         <filterScope>Mine</filterScope>
         <filters>
             <field>CAMPAIGN.ACTIVE</field>
@@ -288,6 +205,26 @@
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>FullAccess</sharingModel>
+    <webLinks>
+        <fullName>ViewAllCampaignMembers</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>500</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View All Campaign Members</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/camp/rptcmpgncalldown.jsp?scope=1&amp;scopeid={!Campaign_Name}</url>
+        <width>500</width>
+    </webLinks>
     <webLinks>
         <fullName>ViewCampaignInfluenceReport</fullName>
         <availability>online</availability>

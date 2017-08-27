@@ -87,6 +87,17 @@
         <fullName>ListPrice</fullName>
     </fields>
     <fields>
+        <fullName>LocationId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MinimumCrewSize</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>OrderId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -116,6 +127,11 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>RecommendedCrewSize</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>RootWorkOrderLineItemId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -123,6 +139,18 @@
     </fields>
     <fields>
         <fullName>ServiceAppointmentCount</fullName>
+    </fields>
+    <fields>
+        <fullName>ServiceReportTemplateId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ServiceTerritoryId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>StartDate</fullName>
@@ -161,6 +189,12 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>MasterDetail</type>
+    </fields>
+    <fields>
+        <fullName>WorkTypeId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <searchLayouts>
         <customTabListAdditionalFields>WorkOrder</customTabListAdditionalFields>

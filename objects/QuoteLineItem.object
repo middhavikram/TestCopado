@@ -37,9 +37,6 @@
         <fullName>Discount</fullName>
     </fields>
     <fields>
-        <fullName>HasSchedule</fullName>
-    </fields>
-    <fields>
         <fullName>ListPrice</fullName>
     </fields>
     <fields>

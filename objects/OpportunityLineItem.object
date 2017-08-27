@@ -55,17 +55,6 @@
         <fullName>ProductCode</fullName>
     </fields>
     <fields>
-        <fullName>Product__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Product</label>
-        <referenceTo>Product2</referenceTo>
-        <relationshipLabel>Opportunity Product</relationshipLabel>
-        <relationshipName>Opportunity_Product</relationshipName>
-        <required>false</required>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>Quantity</fullName>
     </fields>
     <fields>

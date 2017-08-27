@@ -64,434 +64,128 @@
         <actionName>WebsiteHighlightAction</actionName>
         <type>Default</type>
     </actionOverrides>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Account_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Account_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Phone</fields>
+        <fields>BillingAddress</fields>
+        <fields>Website</fields>
+        <fields>OwnerId</fields>
+        <label>Account Compact Layout</label>
+    </compactLayouts>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
     <enableFeeds>true</enableFeeds>
-    <enableHistory>true</enableHistory>
-    <externalSharingModel>Private</externalSharingModel>
+    <enableHistory>false</enableHistory>
     <fields>
         <fullName>AccountNumber</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>AccountSource</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>Active_del_del__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <label>Active</label>
-        <length>100</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>AnnualRevenue</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>BillingAddress</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>CleanStatus</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>ConvertedCreatedDate__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <formula>DATEVALUE(CreatedDate)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>ConvertedCreatedDate</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>Created_From_Lead__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Created From Lead</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>Current_Month__c</fullName>
-        <externalId>false</externalId>
-        <formula>Month(SLAExpirationDate__c) == Month(Today())</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Current Month</label>
-        <trackHistory>false</trackHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
-        <fullName>CustomerPriority__c</fullName>
-        <externalId>false</externalId>
-        <label>Customer Priority</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>High</fullName>
-                    <default>false</default>
-                    <label>High</label>
-                </value>
-                <value>
-                    <fullName>Low</fullName>
-                    <default>false</default>
-                    <label>Low</label>
-                </value>
-                <value>
-                    <fullName>Medium</fullName>
-                    <default>false</default>
-                    <label>Medium</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
-        <fullName>DandbCompanyId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Description</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>DunsNumber</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>Encrypted__c</fullName>
-        <externalId>false</externalId>
-        <label>Encrypted</label>
-        <length>170</length>
-        <maskChar>asterisk</maskChar>
-        <maskType>all</maskType>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>EncryptedText</type>
     </fields>
     <fields>
         <fullName>Fax</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>true</trackHistory>
     </fields>
     <fields>
         <fullName>Industry</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>IsCustomerPortal</fullName>
-    </fields>
-    <fields>
-        <fullName>IsExcludedFromRealign</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>IsPartner</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Jigsaw</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>NaicsCode</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>NaicsDesc</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Name</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>true</trackFeedHistory>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>NumberOfEmployees</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>NumberofLocations__c</fullName>
-        <externalId>false</externalId>
-        <label>Number of Locations</label>
-        <precision>3</precision>
-        <required>false</required>
-        <scale>0</scale>
+        <fullName>OperatingHoursId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Open_Amounts_Deal__c</fullName>
-        <externalId>false</externalId>
-        <label>Open Amounts Deal</label>
-        <summarizedField>Opportunity.Amount</summarizedField>
-        <summaryFilterItems>
-            <field>Opportunity.StageName</field>
-            <operation>notEqual</operation>
-            <value>Closed Won, Closed Lost</value>
-        </summaryFilterItems>
-        <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
-        <summaryOperation>sum</summaryOperation>
-        <trackHistory>false</trackHistory>
-        <type>Summary</type>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
-        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Ownership</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>ParentId</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
         <type>Hierarchy</type>
     </fields>
     <fields>
         <fullName>Phone</fullName>
-        <encrypted>true</encrypted>
+        <inlineHelpText>Phone numbers are a great way to call people on phones.  Phones are what we call our pocket computers even though we use them for games, selfies, and facebook.</inlineHelpText>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Rating</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>SLAExpirationDate__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <label>SLA Expiration Date</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>SLASerialNumber__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <label>SLA Serial Number</label>
-        <length>10</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>SLA__c</fullName>
-        <externalId>false</externalId>
-        <label>SLA</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Gold</fullName>
-                    <default>false</default>
-                    <label>Gold</label>
-                </value>
-                <value>
-                    <fullName>Silver</fullName>
-                    <default>false</default>
-                    <label>Silver</label>
-                </value>
-                <value>
-                    <fullName>Platinum</fullName>
-                    <default>false</default>
-                    <label>Platinum</label>
-                </value>
-                <value>
-                    <fullName>Bronze</fullName>
-                    <default>false</default>
-                    <label>Bronze</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>ShippingAddress</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Sic</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>SicDesc</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Site</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>TickerSymbol</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>Today_Text__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <label>Today Text</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>Today__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <formula>Today()</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Today</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>Tradestyle</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>Trial_Pool_del__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Trial Pool</label>
-        <referenceTo>Trial_Pool__c</referenceTo>
-        <relationshipLabel>Accounts</relationshipLabel>
-        <relationshipName>Accounts_del</relationshipName>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Type</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
         <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>Ultimate_Parent__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <label>Ultimate Parent</label>
-        <length>20</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>UpsellOpportunity__c</fullName>
-        <externalId>false</externalId>
-        <label>Upsell Opportunity</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Maybe</fullName>
-                    <default>false</default>
-                    <label>Maybe</label>
-                </value>
-                <value>
-                    <fullName>No</fullName>
-                    <default>false</default>
-                    <label>No</label>
-                </value>
-                <value>
-                    <fullName>Yes</fullName>
-                    <default>false</default>
-                    <label>Yes</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Website</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>YearStarted</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-    </fields>
-    <fields>
-        <fullName>eRPM_Id__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>true</externalId>
-        <label>eRPM Id</label>
-        <length>255</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <listViews>
         <fullName>AllAccounts</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>ACCOUNT.ADDRESS1_STATE</columns>
+        <columns>ACCOUNT.PHONE1</columns>
+        <columns>ACCOUNT.TYPE</columns>
+        <columns>CORE.USERS.FIRST_NAME</columns>
+        <columns>CORE.USERS.LAST_NAME</columns>
         <filterScope>Everything</filterScope>
         <label>All Accounts</label>
     </listViews>
@@ -500,72 +194,80 @@
         <filterScope>Mine</filterScope>
         <label>My Accounts</label>
     </listViews>
-    <listViews>
-        <fullName>NewLastWeek</fullName>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>ACCOUNT.CREATED_DATE</field>
-            <operation>equals</operation>
-            <value>LAST_WEEK</value>
-        </filters>
-        <label>New Last Week</label>
-    </listViews>
-    <listViews>
-        <fullName>NewThisWeek</fullName>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>ACCOUNT.CREATED_DATE</field>
-            <operation>equals</operation>
-            <value>THIS_WEEK</value>
-        </filters>
-        <label>New This Week</label>
-    </listViews>
-    <listViews>
-        <fullName>PlatinumandGoldSLACustomers</fullName>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>ACCOUNT.SITE</columns>
-        <columns>ACCOUNT.ADDRESS1_STATE</columns>
-        <columns>ACCOUNT.PHONE1</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Everything</filterScope>
-        <label>Platinum and Gold SLA Customers</label>
-    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.ADDRESS1_CITY</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.PHONE1</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>ACCOUNT.SITE</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CORE.USERS.ALIAS</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.TYPE</lookupDialogsAdditionalFields>
+        <lookupFilterFields>ACCOUNT.NAME</lookupFilterFields>
+        <lookupFilterFields>CORE.USERS.ALIAS</lookupFilterFields>
+        <lookupFilterFields>ACCOUNT.TYPE</lookupFilterFields>
         <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>ACCOUNT.SITE</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CORE.USERS.ALIAS</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>ACCOUNT.TYPE</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>ACCOUNT.PHONE1</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.SITE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.PHONE1</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <webLinks>
-        <fullName>Billing</fullName>
+        <fullName>GoogleMaps</fullName>
         <availability>online</availability>
         <displayType>link</displayType>
         <encodingKey>UTF-8</encodingKey>
-        <hasMenubar>true</hasMenubar>
+        <hasMenubar>false</hasMenubar>
         <hasScrollbars>true</hasScrollbars>
-        <hasToolbar>true</hasToolbar>
+        <hasToolbar>false</hasToolbar>
         <height>600</height>
         <isResizable>true</isResizable>
         <linkType>url</linkType>
-        <masterLabel>Billing</masterLabel>
+        <masterLabel>Google Maps</masterLabel>
         <openType>newWindow</openType>
         <position>none</position>
         <protected>false</protected>
-        <showsLocation>true</showsLocation>
-        <showsStatus>true</showsStatus>
-        <url>http://www.genwatt.com/genwatt/billing.htm?actname={!Account_Name}</url>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Account_BillingStreet}+{!Account_BillingCity}+{!Account_BillingState}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/news?&amp;q={!Account_Name}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Account_Name}</url>
     </webLinks>
 </CustomObject>

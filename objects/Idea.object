@@ -23,18 +23,6 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>First_field__c</fullName>
-        <externalId>false</externalId>
-        <label>First field</label>
-        <type>AutoNumber</type>
-    </fields>
-    <fields>
-        <fullName>Second_Field__c</fullName>
-        <externalId>false</externalId>
-        <label>Second Field</label>
-        <type>AutoNumber</type>
-    </fields>
-    <fields>
         <fullName>Status</fullName>
         <type>Picklist</type>
     </fields>
@@ -61,28 +49,7 @@
         <fullName>InternalIdeasIdeaRecordType</fullName>
         <active>true</active>
         <description>Record Type used to associate ideas with a specific community</description>
-        <label>Internal Zone: Idea Record Type</label>
-        <picklistValues>
-            <picklist>Categories</picklist>
-            <values>
-                <fullName>First</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Second</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Third</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Record_type_for_community_09a28000000PHtPAAW_entity_Idea</fullName>
-        <active>true</active>
-        <description>Record type used to associate Idea with a specific zone</description>
-        <label>New Zone: Idea Record Type</label>
+        <label>Internal Ideas: Idea Record Type</label>
     </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>IDEA.TITLE</customTabListAdditionalFields>
@@ -95,7 +62,6 @@
         <customTabListAdditionalFields>IDEA.CATEGORIES</customTabListAdditionalFields>
         <customTabListAdditionalFields>IDEA.STATUS</customTabListAdditionalFields>
         <customTabListAdditionalFields>IDEA.LAST_COMMENT_DATE</customTabListAdditionalFields>
-        <customTabListAdditionalFields>IDEA.IDEA_THEME</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>IDEA.TITLE</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>COMMUNITY.NAME</lookupDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>IDEA.TITLE</lookupPhoneDialogsAdditionalFields>

@@ -93,9 +93,9 @@
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>AccountId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
@@ -114,36 +114,11 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
-        <fullName>CleanStatus</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>Create_Case__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <formula>HYPERLINK(&quot;/apex/CreateCase?contactId=&quot;&amp;Id,&apos;Create Case&apos;,&apos;_self&apos;)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Create Case</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>DOB__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <label>DOB</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Date</type>
-    </fields>
-    <fields>
         <fullName>Department</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Description</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
@@ -152,12 +127,10 @@
     </fields>
     <fields>
         <fullName>Email</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Fax</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
@@ -170,23 +143,11 @@
     </fields>
     <fields>
         <fullName>HomePhone</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Jigsaw</fullName>
         <trackFeedHistory>false</trackFeedHistory>
-    </fields>
-    <fields>
-        <fullName>Languages__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <label>Languages</label>
-        <length>100</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
     </fields>
     <fields>
         <fullName>LastCURequestDate</fullName>
@@ -200,46 +161,15 @@
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>Level__c</fullName>
-        <externalId>false</externalId>
-        <label>Level</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Secondary</fullName>
-                    <default>false</default>
-                    <label>Secondary</label>
-                </value>
-                <value>
-                    <fullName>Tertiary</fullName>
-                    <default>false</default>
-                    <label>Tertiary</label>
-                </value>
-                <value>
-                    <fullName>Primary</fullName>
-                    <default>false</default>
-                    <label>Primary</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>MailingAddress</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>MobilePhone</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Name</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>true</trackFeedHistory>
     </fields>
     <fields>
@@ -248,7 +178,6 @@
     </fields>
     <fields>
         <fullName>OtherPhone</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
@@ -258,7 +187,6 @@
     </fields>
     <fields>
         <fullName>Phone</fullName>
-        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
@@ -267,59 +195,31 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Salutation_Text__c</fullName>
-        <encrypted>false</encrypted>
-        <externalId>false</externalId>
-        <formula>Text(Salutation)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Salutation Text</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Title</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <listViews>
         <fullName>AllContacts</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CORE.USERS.FIRST_NAME</columns>
+        <columns>CORE.USERS.LAST_NAME</columns>
         <filterScope>Everything</filterScope>
         <label>All Contacts</label>
     </listViews>
     <listViews>
-        <fullName>BirthdaysThisMonth</fullName>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CONTACT.BIRTHDATE</field>
-            <operation>equals</operation>
-            <value>THIS_MONTH</value>
-        </filters>
-        <label>Birthdays This Month</label>
-    </listViews>
-    <listViews>
         <fullName>MyContacts</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CORE.USERS.ALIAS</columns>
         <filterScope>Mine</filterScope>
         <label>My Contacts</label>
-    </listViews>
-    <listViews>
-        <fullName>NewLastWeek</fullName>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CONTACT.CREATED_DATE</field>
-            <operation>equals</operation>
-            <value>LAST_WEEK</value>
-        </filters>
-        <label>New Last Week</label>
-    </listViews>
-    <listViews>
-        <fullName>NewThisWeek</fullName>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CONTACT.CREATED_DATE</field>
-            <operation>equals</operation>
-            <value>THIS_WEEK</value>
-        </filters>
-        <label>New This Week</label>
     </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
@@ -327,25 +227,58 @@
         <customTabListAdditionalFields>CONTACT.PHONE1</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>ACCOUNT.SITE</lookupDialogsAdditionalFields>
+        <lookupFilterFields>FULL_NAME</lookupFilterFields>
+        <lookupFilterFields>ACCOUNT.NAME</lookupFilterFields>
         <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>ACCOUNT.SITE</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE1</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE3</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE4</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE5</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE6</lookupPhoneDialogsAdditionalFields>
-        <searchFilterFields>CONTACT.FIRST_NAME</searchFilterFields>
-        <searchFilterFields>CONTACT.LAST_NAME</searchFilterFields>
-        <searchFilterFields>ACCOUNT.NAME</searchFilterFields>
         <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.SITE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CONTACT.PHONE1</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CONTACT.EMAIL</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Create_Case__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Contact_MailingStreet}+{!Contact_MailingCity}+{!Contact_MailingState}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Contact_FirstName} {!Contact_LastName}</url>
+    </webLinks>
 </CustomObject>
